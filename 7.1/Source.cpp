@@ -1,14 +1,25 @@
 #include<stdio.h>
 int main() {
-	int x,a;
+	int x,a=1;
 	scanf_s("%d", &x);
-	for (a = 0; x > a; a = a+1) {
+	while (x >= a) {
+		if (x == 2 * a) {
+			printf_s("even number");
+			break;
 		}
-	if (x == 2 * a) {
-		printf_s("even number");
-	}
-	else {
-		printf_s("odd number");
+		else {
+			a = a+1;
+		}
+}
+	a = 1;
+	while (x >= a) {
+		if (x == 2 * a+1) {
+			printf_s("odd number");
+			break;
+		}
+		else {
+			a = a + 1;
+		}
 	}
 	return 0;
 }
